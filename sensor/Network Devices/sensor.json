@@ -1,0 +1,36 @@
+{
+    "name": "Network Devices",
+    "description": "List network devices and associated address.",
+    "result_type": 1,
+    "seconds": 0,
+    "seconds_never_flag": 0,
+    "qseconds": 600,
+    "event_flag": 0,
+    "ignore_case_flag": 1,
+    "category": "Other",
+    "exclude_from_parse_flag": 0,
+    "delimiter": ",",
+    "hidden_flag": 0,
+    "meta_data": [],
+    "parameters": [],
+    "columns": [
+        {
+            "column_index": 0,
+            "name": "Network Device",
+            "result_type": 5
+        },
+        {
+            "column_index": 1,
+            "name": "Assigned Address",
+            "result_type": 1
+        }
+    ],
+    "queries": {
+        "windows": null,
+        "linux": "linux.sh",
+        "mac": null,
+        "solaris": null,
+        "aix": null
+    },
+    "content_set": "simple-networking"
+}

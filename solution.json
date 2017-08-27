@@ -1,0 +1,19 @@
+{
+    "id": "8e4e57f0-8b6b-11e7-865b-d36b5d9c9e4f",
+    "name": "Simple Networking",
+    "description": "description for Simple Networking",
+    "default_content": 0,
+    "category": "Other",
+    "deleted": 0,
+    "featured": 0,
+    "links": [
+        {
+            "name": "Homepage",
+            "value": "https://github.com/MainlandOre/simple-networking"
+        },
+        {
+            "name": "Issues Tracker",
+            "value": "https://github.com/MainlandOre/simple-networking/issues"
+        }
+    ]
+}
