@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+- '6.11'
+script:
+- npm run compile
+notifications:
+  email:
+    recipients:
+    - mainlandore@gmail.com
+    on_success: never # default: change
+    on_failure: always # default: always
+deploy:
+  # GitHub release a new version so we can always get back to that commit of the code.
+  # This deployer does just that... creates a new release only when a commit is tagged.
+  # This command allows us to use GitHub Releases as a file storage for our built solution xml.
+  - provider: releases
+    skip_cleanup: true
+    api_key: $RELEASES_SECRET
+    file: "build/${TRAVIS_TAG}/Simple_Networking.xml"
+    on:
+      repo: MainlandOre/simple-networking
+      tags: true
+  # Launch Tanium-Builder to publish this new version of our solution xml. If publishing
+  # solution xml via github releases, ensure that provider runs before this one.
+  # Ensure before runnign publish you have specified the `tb_token` environmental variable.
+  - provider: script
+    skip_cleanup: true
+    script: "node node_modules/.bin/tb publish https://github.com/MainlandOre/simple-networking/releases/download/$TRAVIS_TAG/Simple_Networking.xml --verbose"
+    on:
+      repo: MainlandOre/simple-networking
+      tags: true
