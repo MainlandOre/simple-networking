@@ -1,12 +1,12 @@
 {
-    "name": "simple-networking",
-    "version": "0.0.0",
-    "description": "description for Simple Networking",
-    "scripts": {
-        "compile": "node_modules/.bin/tb compile --verbose"
-    },
-    "license": "MIT",
-    "devDependencies": {
-        "tanium-builder": "^0.7.0"
-    }
+  "name": "simple-networking",
+  "version": "0.0.1",
+  "description": "description for Simple Networking",
+  "scripts": {
+    "compile": "node_modules/.bin/tb compile --verbose"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "tanium-builder": "^0.7.0"
+  }
 }
